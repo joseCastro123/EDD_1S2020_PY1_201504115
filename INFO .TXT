@@ -1,0 +1,35 @@
+###Lectura de arhcivos#####
+<Variables>
+Dimension x,y
+Dobles: pos_x,pos_y
+triples: pos_X,pos_y
+diccionario : listaDoble
+
+
+
+###Juego#####
+<Variables>
+fichas: en cola al azar
+
+###Jugadores#####
+<Variables>
+agregar_jugador(string usuario)
+arbol binario de busqueda()
+
+###Score Board#####
+<Variables>
+linked_list(score) ordenados de > a <
+linked_list    en el menu inicio ordenados de > a < :nombre y puntaje:
+
+###Tablero de Juego#####
+<Variables>
+matrix dispersa
+
+
+###Reglasdel juego#####
+<Variables>
+lista circular doble... solo dos jugadores
+jugador con su lista doble con 7 fichas
+1 palabra por turno
+
+

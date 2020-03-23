@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1584740130 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/main.cpp
+	<iostream>
+	<string>
+	"Tree_ABB.h"
+	"Node_ABB.h"
+	"LinkedList_Personal.h"
+
+1584032510 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/CirculadDoublyLinkedList.h
+	"Node_CD.h"
+	<iostream>
+	<string>
+
+1583951536 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_CD.h
+	<iostream>
+	<string>
+
+1583951536 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_CD.cpp
+	"Node_CD.h"
+	<iostream>
+	<string>
+
+1584074855 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/CirculadDoublyLinkedList.cpp
+	"CirculadDoublyLinkedList.h"
+	"Node_CD.h"
+	<iostream>
+	<string>
+
+1584124410 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Token.cpp
+	"Node_Token.h"
+	<iostream>
+	<string>
+
+1584124409 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_Token.h
+	<iostream>
+	<string>
+
+1584154293 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Cola.cpp
+	"Cola.h"
+	"Node_Token.h"
+	<iostream>
+	<string>
+
+1584131362 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Cola.h
+	"Node_Token.h"
+	<iostream>
+	<string>
+
+1584155992 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Score_Personal.cpp
+	"Node_Score_Personal.h"
+	<iostream>
+	<string>
+
+1584155253 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_Score_Personal.h
+
+1584223081 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/LinkedList_Personal.cpp
+	"LinkedList_Personal.h"
+	<iostream>
+	<string>
+
+1584223105 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/LinkedList_Personal.h
+	"Node_Score_Personal.h"
+	<iostream>
+	<string>
+
+1584744448 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_ABB.cpp
+	"Node_ABB.h"
+	<iostream>
+	"LinkedList_Personal.h"
+
+1584660016 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_ABB.h
+	<iostream>
+	<string>
+	"LinkedList_Personal.h"
+
+1584742007 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Tree_ABB.cpp
+	"Tree_ABB.h"
+	<iostream>
+	<string>
+
+1584742007 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Tree_ABB.h
+	"Node_ABB.h"
+	<iostream>
+	<string>
+
