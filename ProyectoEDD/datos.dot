@@ -1,0 +1,37 @@
+digraph R { 
+ rankdir=TB 
+ node [shape=box fontname=Arial];
+ graph[ nodesep = 0.5];
+00 [label="M\l",	group=0]
+20 [label="X:2\l",	group=2]
+40 [label="X:4\l",	group=4]
+80 [label="X:8\l",	group=8]
+02 [label="Y:2\l",	group=0]
+22 [label="A\l",	group=2]
+42 [label="J\l",	group=4]
+82 [label="O\l",	group=8]
+04 [label="Y:4\l",	group=0]
+44 [label="O\l",	group=4]
+
+
+{rank = same;  	00; 	20; 	40; 	80; }
+{rank = same; 	02; 	22; 	42; 	82; }
+{rank = same; 	04; 	44; }
+
+
+00->20[dir=both]
+00->02[dir=both]
+20->40[dir=both]
+20->22[dir=both]
+40->80[dir=both]
+40->42[dir=both]
+80->82[dir=both]
+02->22[dir=both]
+02->04[dir=both]
+22->42[dir=both]
+42->82[dir=both]
+42->44[dir=both]
+04->44[dir=both]
+
+
+}

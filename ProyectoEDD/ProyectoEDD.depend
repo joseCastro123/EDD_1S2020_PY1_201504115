@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1584740130 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/main.cpp
+1585973399 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/main.cpp
 	<iostream>
 	<string>
 	"Tree_ABB.h"
 	"Node_ABB.h"
 	"LinkedList_Personal.h"
+	"Sparse_Matrix.h"
 
 1584032510 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/CirculadDoublyLinkedList.h
 	"Node_CD.h"
@@ -73,7 +74,7 @@
 	<string>
 	"LinkedList_Personal.h"
 
-1584742007 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Tree_ABB.cpp
+1584766052 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Tree_ABB.cpp
 	"Tree_ABB.h"
 	<iostream>
 	<string>
@@ -82,4 +83,21 @@
 	"Node_ABB.h"
 	<iostream>
 	<string>
+
+1585539332 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Sparse.cpp
+	"Node_Sparse.h"
+	<iostream>
+	<string>
+	<string.h>
+
+1585669283 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_Sparse.h
+	<iostream>
+	<string>
+	<string.h>
+
+1585723650 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Sparse_Matrix.h
+	<iostream>
+	<string>
+	<string.h>
+	"Node_Sparse.h"
 
