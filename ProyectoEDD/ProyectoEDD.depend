@@ -1,13 +1,19 @@
 # depslib dependency file v1.0
-1585973399 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/main.cpp
+1586142130 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/main.cpp
 	<iostream>
 	<string>
-	"Tree_ABB.h"
+	"CirculadDoublyLinkedList.h"
+	"Cola.h"
+	"Arbol_Busqueda.h"
 	"Node_ABB.h"
 	"LinkedList_Personal.h"
 	"Sparse_Matrix.h"
+	"Read_File.h"
+	<iostream>
+	<fstream>
+	<jsoncpp/json/json.h>
 
-1584032510 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/CirculadDoublyLinkedList.h
+1586136746 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/CirculadDoublyLinkedList.h
 	"Node_CD.h"
 	<iostream>
 	<string>
@@ -21,9 +27,10 @@
 	<iostream>
 	<string>
 
-1584074855 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/CirculadDoublyLinkedList.cpp
+1586139623 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/CirculadDoublyLinkedList.cpp
 	"CirculadDoublyLinkedList.h"
 	"Node_CD.h"
+	<fstream>
 	<iostream>
 	<string>
 
@@ -64,15 +71,14 @@
 	<iostream>
 	<string>
 
-1584744448 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_ABB.cpp
+1586136653 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_ABB.cpp
 	"Node_ABB.h"
 	<iostream>
-	"LinkedList_Personal.h"
+	<string>
 
-1584660016 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_ABB.h
+1586135623 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_ABB.h
 	<iostream>
 	<string>
-	"LinkedList_Personal.h"
 
 1584766052 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Tree_ABB.cpp
 	"Tree_ABB.h"
@@ -84,7 +90,7 @@
 	<iostream>
 	<string>
 
-1585539332 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Sparse.cpp
+1585973676 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Sparse.cpp
 	"Node_Sparse.h"
 	<iostream>
 	<string>
@@ -100,4 +106,40 @@
 	<string>
 	<string.h>
 	"Node_Sparse.h"
+
+1586140122 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Sparse_Matrix.cpp
+	"Sparse_Matrix.h"
+	<fstream>
+	<iostream>
+	<iostream>
+	<string>
+	<string.h>
+	"Node_Sparse.h"
+
+1586131948 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Read_File.cpp
+	"Read_File.h"
+	<iostream>
+	<string>
+	<iostream>
+	<fstream>
+	<jsoncpp/json/json.h>
+	"Sparse_Matrix.h"
+	"CirculadDoublyLinkedList.h"
+
+1586058097 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Read_File.h
+	<iostream>
+	<string>
+	"Sparse_Matrix.h"
+	"CirculadDoublyLinkedList.h"
+
+1586136673 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Arbol_Busqueda.cpp
+	"Arbol_Busqueda.h"
+	"Node_ABB.h"
+	<iostream>
+	<string>
+
+1586136627 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Arbol_Busqueda.h
+	"Node_ABB.h"
+	<iostream>
+	<string>
 

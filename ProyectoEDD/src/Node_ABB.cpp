@@ -1,57 +1,52 @@
 #include "Node_ABB.h"
-
 #include <iostream>
-//#include <string>
-#include "LinkedList_Personal.h"
-
+#include <string>
 using namespace std;
 
-Node_ABB::Node_ABB()
+Nodo_ABB::Nodo_ABB(string data1)
 {
     //ctor
-   // this->data = 0;
-    //this->left_ABB = NULL;
-    //this->right_ABB = NULL;
-
-
+    data = data1;
+    left = NULL;
+    right = NULL;
 }
-Node_ABB::~Node_ABB()
+
+Nodo_ABB::~Nodo_ABB()
 {
     //dtor
 }
-
-
-
-/*
-    //sets
-void Node_ABB::setData(int data1)
+//sets
+void Nodo_ABB::setData(string data1)
 {
-    this->data = data1;
+
+data = data1;
+}
+void Nodo_ABB::setLeft(Nodo_ABB *left1)
+{
+
+    left = left1;
 }
 
-void Node_ABB::setLeft_ABB(Node_ABB *left1)
+void Nodo_ABB::setRight(Nodo_ABB * right1)
 {
-    this->left_ABB = left1;
+
+    right = right1;
 }
 
-void Node_ABB::setRight_ABB(Node_ABB *right)
+//gets
+string Nodo_ABB::getData()
 {
-    this->right_ABB = right;
+ return data;
+
 }
 
-    //gets
-int Node_ABB::getData()
+Nodo_ABB * Nodo_ABB::getLeft()
 {
-    return data;
+ return left;
 }
 
-Node_ABB * Node_ABB::getLeft_ABB()
+Nodo_ABB * Nodo_ABB::getRight()
 {
-    return left_ABB;
-}
 
-Node_ABB * Node_ABB::getRight_ABB()
-{
-    return right_ABB;
+return right;
 }
-*/

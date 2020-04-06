@@ -34,23 +34,29 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Arbol_Busqueda.h" />
 		<Unit filename="include/CirculadDoublyLinkedList.h" />
 		<Unit filename="include/Cola.h" />
 		<Unit filename="include/LinkedList_Personal.h" />
 		<Unit filename="include/Node_ABB.h" />
 		<Unit filename="include/Node_CD.h" />
 		<Unit filename="include/Node_Score_Personal.h" />
+		<Unit filename="include/Node_Sparse.h" />
 		<Unit filename="include/Node_Token.h" />
-		<Unit filename="include/Tree_ABB.h" />
+		<Unit filename="include/Read_File.h" />
+		<Unit filename="include/Sparse_Matrix.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Arbol_Busqueda.cpp" />
 		<Unit filename="src/CirculadDoublyLinkedList.cpp" />
 		<Unit filename="src/Cola.cpp" />
 		<Unit filename="src/LinkedList_Personal.cpp" />
 		<Unit filename="src/Node_ABB.cpp" />
 		<Unit filename="src/Node_CD.cpp" />
 		<Unit filename="src/Node_Score_Personal.cpp" />
+		<Unit filename="src/Node_Sparse.cpp" />
 		<Unit filename="src/Node_Token.cpp" />
-		<Unit filename="src/Tree_ABB.cpp" />
+		<Unit filename="src/Read_File.cpp" />
+		<Unit filename="src/Sparse_Matrix.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

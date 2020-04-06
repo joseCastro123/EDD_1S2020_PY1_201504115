@@ -22,6 +22,7 @@ class CirculadDoublyLinkedList
         void display_Data();
         void display_data_tail();
         void delete_Data(string);
+        void graph_CircuDoble();
         bool is_Empty();
 
 

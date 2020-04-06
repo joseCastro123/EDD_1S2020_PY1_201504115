@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   Sparse_Matrix.cpp
  * Author: dark
- * 
+ *
  * Created on 29 de marzo de 2020, 20:42
  */
 
@@ -199,7 +199,7 @@ void Sparse_Matrix::insert_Data(int x,int y,string caracter)
             insert_Y(new_Node,x,y);
             insert_X(new_Node,x,y);
 
-           
+
         }
         else if (existLateral(y) == true && existHeaders(x) == true)
         {
@@ -208,7 +208,7 @@ void Sparse_Matrix::insert_Data(int x,int y,string caracter)
             insert_Y(new_Node,x,y);
             insert_X(new_Node,x,y);
 
-           
+
         }
 
 
@@ -219,21 +219,21 @@ void Sparse_Matrix::insert_Data(int x,int y,string caracter)
 
 
 void Sparse_Matrix::insert_X(Node_Sparse *new_Node,int x,int y){
-     
+
     Node_Sparse *temp = begin_Matrix;
     Node_Sparse *temp_Down;
-    
+
     while(temp->getPos_x()!=x){
       temp = temp->getNode_S_Right();
     }
-    
+
     if(temp->getNode_S_Down() ==NULL){
       temp->setNode_S_Down(new_Node);
       new_Node->setNode_S_Up(temp);
     }//aqui puedo borrar jajaa
     else
     {
-       /**********************/  
+       /**********************/
        if (temp->getNode_S_Down()==NULL){
 
       //Node_Sparse *temp = new Node_Sparse(0,y);
@@ -252,7 +252,7 @@ void Sparse_Matrix::insert_X(Node_Sparse *new_Node,int x,int y){
         temp_Down->setNode_S_Down(new_Node);
         new_Node->setNode_S_Up(temp_Down);
       }else if (temp_Down->getNode_S_Down()!=NULL && temp_Down->getNode_S_Down()->getPos_y() != y){
-          
+
         Node_Sparse *down_ult = temp_Down->getNode_S_Down();
         temp_Down->setNode_S_Down(new_Node);
         new_Node->setNode_S_Up(temp_Down);
@@ -260,21 +260,21 @@ void Sparse_Matrix::insert_X(Node_Sparse *new_Node,int x,int y){
         down_ult->setNode_S_Up(new_Node);
       }
     }
-        
+
         /****************************/
     }//aqui tambien jajaaj
-   
+
  }
-    
+
 
 void Sparse_Matrix::insert_Y(Node_Sparse *new_Node,int x,int y){
     Node_Sparse *temp = begin_Matrix;
     Node_Sparse *temp_Right;
-    
+
     while(temp->getPos_y()!=y){
       temp = temp->getNode_S_Down();
     }
-    
+
     if(temp->getNode_S_Right() ==NULL){
       temp->setNode_S_Right(new_Node);
       new_Node->setNode_S_Left(temp);
@@ -283,7 +283,7 @@ void Sparse_Matrix::insert_Y(Node_Sparse *new_Node,int x,int y){
     {
      /*******************/
         if(temp->getNode_S_Right()==NULL){
-      
+
       temp->setNode_S_Right(new_Node);
       new_Node->setNode_S_Left(temp);
 
@@ -295,12 +295,12 @@ void Sparse_Matrix::insert_Y(Node_Sparse *new_Node,int x,int y){
         temp_Right = temp_Right->getNode_S_Right();
       }
       if(temp_Right->getNode_S_Right()==NULL){
-        
+
         temp_Right->setNode_S_Right(new_Node);
         new_Node->setNode_S_Left(temp_Right);
 
       }else if(temp_Right->getNode_S_Right()!=NULL && temp_Right->getNode_S_Right()->getPos_x() !=x){
-        
+
         Node_Sparse *der = temp_Right->getNode_S_Right();
 
         temp_Right->setNode_S_Right(new_Node);
@@ -311,7 +311,7 @@ void Sparse_Matrix::insert_Y(Node_Sparse *new_Node,int x,int y){
     }
      /******************/
     }//aqui tambien jajaaj
-    
+
     }
 //begin method display data
 void Sparse_Matrix::display_Column_x()
@@ -376,7 +376,7 @@ void Sparse_Matrix::Graph_Data(){
 string begin_info = "digraph R { \n rankdir=TB \n node [shape=box fontname=Arial];\n graph[ nodesep = 0.5];\n";
 string rank_begin = "{";
 string rank_end = "}\n";
-string begin_rank = ""; 
+string begin_rank = "";
 string order_Same = " ";
 
 string end_info="}";
@@ -388,8 +388,8 @@ if(begin_Matrix!= NULL){
 
     ofstream archivo;  // objeto de la clase ofstream
 
-    archivo.open("datos.dot");
-    
+    archivo.open("Matrix.dot");
+
     Node_Sparse *ActualColumna = begin_Matrix;//->getNode_S_Right();
 
         while (ActualColumna != NULL) {
@@ -399,13 +399,13 @@ if(begin_Matrix!= NULL){
                 //order_Same =order_Same +" "+ to_string(ActualFila->getPos_x())+to_string(ActualFila->getPos_y())+"; ";
                 ActualFila = ActualFila->getNode_S_Down();
             }
-            
+
             //begin_rank =begin_rank+"{rank = same; " +order_Same+"}\n";
             //order_Same="";
             ActualColumna = ActualColumna->getNode_S_Right();
         }
-    
-    
+
+
     //***************************************************************************************
     Node_Sparse *ActualFila1 = begin_Matrix;//->getNode_S_Right();
 
@@ -421,163 +421,164 @@ if(begin_Matrix!= NULL){
             if(ActualColumna1->getNode_S_Up()== NULL && ActualColumna1->getNode_S_Left()==NULL
                 && ActualColumna1->getNode_S_Right()!= NULL &&ActualColumna1->getNode_S_Down()!=NULL)//not fineshe here
             {
-     
+
 
             info_Matrix = info_Matrix +
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Right()->getPos_x())+to_string(ActualColumna1->getNode_S_Right()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Down()->getPos_x())+to_string(ActualColumna1->getNode_S_Down()->getPos_y())+"[dir=both]\n";
-                        
+
             }else if(ActualColumna1->getNode_S_Up()== NULL && ActualColumna1->getNode_S_Left()!=NULL
                 && ActualColumna1->getNode_S_Right()!= NULL &&ActualColumna1->getNode_S_Down()!=NULL){
-            
+
             info_Matrix = info_Matrix +
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Right()->getPos_x())+to_string(ActualColumna1->getNode_S_Right()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Down()->getPos_x())+to_string(ActualColumna1->getNode_S_Down()->getPos_y())+"[dir=both]\n";//+
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Left()->getPos_x())+to_string(ActualColumna1->getNode_S_Left()->getPos_y())+"[dir=both]\n"
                     //;
-            
-            
+
+
             }else if(ActualColumna1->getNode_S_Up()== NULL && ActualColumna1->getNode_S_Left()!=NULL
                 && ActualColumna1->getNode_S_Right()== NULL && ActualColumna1->getNode_S_Down()!=NULL){
-            
+
             info_Matrix = info_Matrix +
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Down()->getPos_x())+to_string(ActualColumna1->getNode_S_Down()->getPos_y())+"[dir=both]\n";//+
-                    
+
               //      to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                //     to_string(ActualColumna1->getNode_S_Left()->getPos_x())+to_string(ActualColumna1->getNode_S_Left()->getPos_y())+"[dir=both]\n"
                  //   ;
-            
-            
+
+
             }else if(ActualColumna1->getNode_S_Up()!= NULL && ActualColumna1->getNode_S_Left()==NULL
                 && ActualColumna1->getNode_S_Right()!= NULL && ActualColumna1->getNode_S_Down()==NULL){
-            
+
             info_Matrix = info_Matrix +
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Up()->getPos_x())+to_string(ActualColumna1->getNode_S_Up()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Right()->getPos_x())+to_string(ActualColumna1->getNode_S_Right()->getPos_y())+"[dir=both]\n"
                     ;
-            
+
             }else if(ActualColumna1->getNode_S_Up()!= NULL && ActualColumna1->getNode_S_Left()!=NULL
                 && ActualColumna1->getNode_S_Right()!= NULL && ActualColumna1->getNode_S_Down()==NULL){
-            
+
             info_Matrix = info_Matrix +
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Up()->getPos_x())+to_string(ActualColumna1->getNode_S_Up()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Right()->getPos_x())+to_string(ActualColumna1->getNode_S_Right()->getPos_y())+"[dir=both]\n";//+
-             
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Left()->getPos_x())+to_string(ActualColumna1->getNode_S_Left()->getPos_y())+"[dir=both]\n"
                     //;
-            
+
             }else if(ActualColumna1->getNode_S_Up()!= NULL && ActualColumna1->getNode_S_Left()!=NULL
                 && ActualColumna1->getNode_S_Right()== NULL && ActualColumna1->getNode_S_Down()==NULL){
-            
+
             //info_Matrix = info_Matrix +
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Up()->getPos_x())+to_string(ActualColumna1->getNode_S_Up()->getPos_y())+"[dir=both]\n"+
-                     
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Left()->getPos_x())+to_string(ActualColumna1->getNode_S_Left()->getPos_y())+"[dir=both]\n"
                     //;
-            
-            
-            
+
+
+
             }else if(ActualColumna1->getNode_S_Up()!= NULL && ActualColumna1->getNode_S_Left()!=NULL
                 && ActualColumna1->getNode_S_Right()!= NULL && ActualColumna1->getNode_S_Down()!=NULL){
-            
+
             info_Matrix = info_Matrix +
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Up()->getPos_x())+to_string(ActualColumna1->getNode_S_Up()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Right()->getPos_x())+to_string(ActualColumna1->getNode_S_Right()->getPos_y())+"[dir=both]\n"+
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Left()->getPos_x())+to_string(ActualColumna1->getNode_S_Left()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Down()->getPos_x())+to_string(ActualColumna1->getNode_S_Down()->getPos_y())+"[dir=both]\n"
                     ;
-            
-            
+
+
             }else if(ActualColumna1->getNode_S_Up()!= NULL && ActualColumna1->getNode_S_Left()==NULL
                 && ActualColumna1->getNode_S_Right()!= NULL && ActualColumna1->getNode_S_Down()!=NULL){
-            
+
             info_Matrix = info_Matrix +
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Up()->getPos_x())+to_string(ActualColumna1->getNode_S_Up()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Right()->getPos_x())+to_string(ActualColumna1->getNode_S_Right()->getPos_y())+"[dir=both]\n"+
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Left()->getPos_x())+to_string(ActualColumna1->getNode_S_Left()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Down()->getPos_x())+to_string(ActualColumna1->getNode_S_Down()->getPos_y())+"[dir=both]\n"
                     ;
-            
-            
-            
+
+
+
             }else if(ActualColumna1->getNode_S_Up()!= NULL && ActualColumna1->getNode_S_Left()!=NULL
                 && ActualColumna1->getNode_S_Right()== NULL && ActualColumna1->getNode_S_Down()!=NULL){
-            
+
             info_Matrix = info_Matrix +
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Up()->getPos_x())+to_string(ActualColumna1->getNode_S_Up()->getPos_y())+"[dir=both]\n"+
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Right()->getPos_x())+to_string(ActualColumna1->getNode_S_Right()->getPos_y())+"[dir=both]\n"+
-                    
+
                     //to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     //to_string(ActualColumna1->getNode_S_Left()->getPos_x())+to_string(ActualColumna1->getNode_S_Left()->getPos_y())+"[dir=both]\n"+
-                    
+
                     to_string(ActualColumna1->getPos_x())+to_string(ActualColumna1->getPos_y())+"->"+
                     to_string(ActualColumna1->getNode_S_Down()->getPos_x())+to_string(ActualColumna1->getNode_S_Down()->getPos_y())+"[dir=both]\n"
                     ;
-            
+
             }
-                
-                
-               cout<<"Dato:"<<ActualColumna1->getCaracter()<<" Fila "<<ActualColumna1->getPos_x()<<" Columna "<<ActualColumna1->getPos_y()<<endl;
+
+
+               //cout<<"Dato:"<<ActualColumna1->getCaracter()<<" Fila "<<ActualColumna1->getPos_x()<<" Columna "<<ActualColumna1->getPos_y()<<endl;
                 ActualColumna1 = ActualColumna1->getNode_S_Right();
             }//while actual columna
             begin_rank =begin_rank+"{rank = same; " +order_Same+"}\n";
             order_Same="";
             ActualFila1 = ActualFila1->getNode_S_Down();
         }
-    
-    
+
+
     /************/
-    
-    
+
+
     archivo<<begin_info;
     archivo<<info_label+"\n\n";
     archivo<<begin_rank+"\n\n";
     archivo<<info_Matrix+"\n\n";
     archivo<<end_info;
     archivo.close();
-    cout<<"Archivo creado correctamente";
+    system("dot -Tpng Matrix.dot -o Matrix.png");
+    system("eog Matrix.png");
 }else
 {
 

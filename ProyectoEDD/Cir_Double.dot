@@ -1,0 +1,20 @@
+digraph R {
+	rankdir=TB
+	node [shape=box fontname=Arial];
+	graph[ nodesep = 0.5];
+	hola [label="hola\l"]
+	mundo [label="mundo\l"]
+	proyecto [label="proyecto\l"]
+	Diccionario [label="Diccionario\l"]
+
+
+{rank = same;  	hola; 	mundo; 	proyecto; 	Diccionario; }
+
+
+	hola->mundo[dir=both]
+	mundo->proyecto[dir=both]
+	proyecto->Diccionario[dir=both]
+	Diccionario->hola[dir=both]
+
+
+}

@@ -1,6 +1,7 @@
 #include "CirculadDoublyLinkedList.h"
 
 #include "Node_CD.h"
+#include <fstream>//create file
 #include <iostream>
 #include <string>
 
@@ -36,22 +37,12 @@ void CirculadDoublyLinkedList::insert_front(string word1)
 
 	}else{
 
-        /*
-        funciona
-
-        tail_CircularDoubly_LL->setNext(new_node_CDLL);
-        header_CircularDoubly_LL->setPrevious(new_node_CDLL);
-        new_node_CDLL->setNext(header_CircularDoubly_LL);
-        new_node_CDLL->setPrevious(tail_CircularDoubly_LL);
-        header_CircularDoubly_LL = new_node_CDLL;
-        */
-
         header_CircularDoubly_LL->setPrevious(new_node_CDLL);
         new_node_CDLL->setNext(header_CircularDoubly_LL);
         new_node_CDLL->setPrevious(tail_CircularDoubly_LL);
         tail_CircularDoubly_LL->setNext(new_node_CDLL);
         header_CircularDoubly_LL = new_node_CDLL;
-        //tail_CircularDoubly_LL->setNext(header_CircularDoubly_LL);
+
 
 	}
 
@@ -113,13 +104,6 @@ void CirculadDoublyLinkedList::insert_end(string word1)
 	else
 	{
 
-       /*
-        tail_CircularDoubly_LL->setNext(new_node_CDLL);
-        new_node_CDLL->setPrevious(tail_CircularDoubly_LL);
-        new_node_CDLL->setNext(header_CircularDoubly_LL);
-        tail_CircularDoubly_LL = new_node_CDLL;
-        //tail_CircularDoubly_LL->setPrevious(tail_CircularDoubly_LL);
-        */
 
         tail_CircularDoubly_LL->setNext(new_node_CDLL);
         new_node_CDLL->setNext(header_CircularDoubly_LL);
@@ -235,6 +219,72 @@ void CirculadDoublyLinkedList::display_data_tail()
 
 
     }while(temp != tail_CircularDoubly_LL);
+
+
+
+
+}
+
+void CirculadDoublyLinkedList::graph_CircuDoble()
+{
+
+string begin_info = "digraph R {\n\trankdir=TB\n\tnode [shape=box fontname=Arial];\n\tgraph[ nodesep = 0.5];\n";
+string rank_begin = "{";
+string rank_end = "}\n";
+string begin_rank = "";
+string order_Same = " ";
+
+string end_info="}";
+string info_label = "";
+string info_rank = "";
+string info_Matrix ="";
+
+if(header_CircularDoubly_LL!= NULL){
+
+    ofstream archivo;  // objeto de la clase ofstream
+
+    archivo.open("Cir_Double.dot");
+
+    //***************************************************************************************
+    Node_CD *currentData = header_CircularDoubly_LL;//->getNode_S_Right();
+
+
+            do {
+
+                info_label = info_label +"\t"+currentData->getWord()+" [label=\""+currentData->getWord()+""+"\\l\""+"]\n";
+                order_Same =order_Same +"\t"+ currentData->getWord()+"; ";
+
+
+                info_Matrix = info_Matrix +"\t"+
+                            currentData->getWord()+"->"+currentData->getNext()->getWord()+"[dir=both]\n";
+
+
+                    currentData = currentData->getNext();
+                }while(currentData!=header_CircularDoubly_LL);
+
+            begin_rank =begin_rank+"{rank = same; " +order_Same+"}\n";
+            //order_Same="";
+
+    /************/
+
+
+    archivo<<begin_info;
+    archivo<<info_label+"\n\n";
+    archivo<<"\t"+begin_rank+"\n\n";
+    archivo<<info_Matrix+"\n\n";
+    archivo<<end_info;
+    archivo.close();
+
+    system("dot -Tpng Cir_Double.dot -o Cir_Double.png");
+    system("eog Cir_Double.png");
+}else
+{
+
+cout<<"the doubly linked list is empty";
+
+}
+
+
 
 
 
