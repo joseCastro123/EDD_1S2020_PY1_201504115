@@ -1,0 +1,14 @@
+digraph Tree{
+	rankdir=LR
+	node [shape=record, fontname=Arial];
+
+
+	Belinda[label="Belinda"]
+	Roxana[label="Roxana"]
+
+
+	Belinda->Roxana
+	Roxana->Jose
+
+
+}

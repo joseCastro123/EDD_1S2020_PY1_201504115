@@ -38,7 +38,10 @@
 		<Unit filename="include/CirculadDoublyLinkedList.h" />
 		<Unit filename="include/Cola.h" />
 		<Unit filename="include/LinkedList_Personal.h" />
+		<Unit filename="include/List_Tree.h" />
+		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Node_ABB.h" />
+		<Unit filename="include/Node_Aux.h" />
 		<Unit filename="include/Node_CD.h" />
 		<Unit filename="include/Node_Score_Personal.h" />
 		<Unit filename="include/Node_Sparse.h" />
@@ -50,7 +53,10 @@
 		<Unit filename="src/CirculadDoublyLinkedList.cpp" />
 		<Unit filename="src/Cola.cpp" />
 		<Unit filename="src/LinkedList_Personal.cpp" />
+		<Unit filename="src/List_Tree.cpp" />
+		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Node_ABB.cpp" />
+		<Unit filename="src/Node_Aux.cpp" />
 		<Unit filename="src/Node_CD.cpp" />
 		<Unit filename="src/Node_Score_Personal.cpp" />
 		<Unit filename="src/Node_Sparse.cpp" />

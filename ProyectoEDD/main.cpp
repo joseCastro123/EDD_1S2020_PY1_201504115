@@ -8,23 +8,18 @@ using namespace std;
 #include "LinkedList_Personal.h"
 #include "Sparse_Matrix.h"
 #include "Read_File.h"
+#include "Menu.h"
 //library for read file json
 //investiguet About JsonCpp
 #include <iostream>
 #include <fstream>
 #include <jsoncpp/json/json.h>
 
+#include <cstdlib>
+
 int main()
 {
-    Sparse_Matrix *matrix = new Sparse_Matrix();
-
-    //ifstream ifs("profile.json");
-    CirculadDoublyLinkedList *cdl = new CirculadDoublyLinkedList();
-    Read_File *rf = new Read_File();
-    rf->readFile("profile.json",cdl,matrix);
-    cdl->display_Data();
-    cdl->graph_CircuDoble();
-
-
+    Menu *menu = new Menu();
+    menu->menu_initial();
     return 0;
 }

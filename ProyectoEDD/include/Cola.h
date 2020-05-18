@@ -6,6 +6,15 @@
 #include <iostream>
 #include <string>
 
+#include <cstdlib>//for number ramdom
+
+//for read file .json
+#include <iostream>
+#include <fstream>
+#include <jsoncpp/json/json.h>
+
+#include <locale.h>
+
 using namespace std;
 
 class Cola
@@ -23,8 +32,14 @@ class Cola
         Frente
         */
         bool is_Empty_Cola();
-        void push_Cola(int,char,int);
+        void push_Cola(int,int,string,int);
+        void insertCola_Front(Node_Token *);
+        void insertCola_Middle(Node_Token *);
+        void insertCola_End(Node_Token *);
         void pop_Cola();
+        bool searchId(int);
+        void addWord();
+        void graphCola();
         void front_Cola();
         void display_Cola();
 

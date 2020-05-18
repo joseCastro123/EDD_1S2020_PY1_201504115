@@ -9,6 +9,7 @@ Nodo_ABB::Nodo_ABB(string data1)
     data = data1;
     left = NULL;
     right = NULL;
+    myScore = new LinkedList_Personal();
 }
 
 Nodo_ABB::~Nodo_ABB()

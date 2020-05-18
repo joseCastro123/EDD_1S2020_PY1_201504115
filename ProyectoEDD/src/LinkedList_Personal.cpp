@@ -143,7 +143,10 @@ void LinkedList_Personal::diplays_Data_scP()
 void LinkedList_Personal::insert_middle(int points1)
 {
 
-
-
-
 }
+
+
+
+
+
+

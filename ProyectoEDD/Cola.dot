@@ -1,0 +1,85 @@
+digraph Cola{
+	rankdir=TB
+	node [shape=box, fontname=Arial];
+edge [style="invis",weight=0];
+	Ñ[style=rounded,	label="Ñx8pts\l"]
+	C[style=rounded,	label="Cx3pts\l"]
+	O[style=rounded,	label="Ox1pts\l"]
+	Z[style=rounded,	label="Zx10pts\l"]
+	M[style=rounded,	label="Mx3pts\l"]
+	H[style=rounded,	label="Hx4pts\l"]
+	Y[style=rounded,	label="Yx4pts\l"]
+	P[style=rounded,	label="Px3pts\l"]
+	A[style=rounded,	label="Ax1pts\l"]
+	D[style=rounded,	label="Dx2pts\l"]
+	N[style=rounded,	label="Nx1pts\l"]
+	E[style=rounded,	label="Ex1pts\l"]
+	T[style=rounded,	label="Tx1pts\l"]
+	G[style=rounded,	label="Gx2pts\l"]
+	X[style=rounded,	label="Xx8pts\l"]
+	I[style=rounded,	label="Ix1pts\l"]
+	J[style=rounded,	label="Jx8pts\l"]
+	L[style=rounded,	label="Lx1pts\l"]
+	S[style=rounded,	label="Sx1pts\l"]
+	V[style=rounded,	label="Vx4pts\l"]
+	Q[style=rounded,	label="Qx5pts\l"]
+	U[style=rounded,	label="Ux1pts\l"]
+	B[style=rounded,	label="Bx3pts\l"]
+	F[style=rounded,	label="Fx4pts\l"]
+	R[style=rounded,	label="Rx1pts\l"]
+
+
+	{rank = same;  Ñ; }
+	{rank = same; C; }
+	{rank = same; O; }
+	{rank = same; Z; }
+	{rank = same; M; }
+	{rank = same; H; }
+	{rank = same; Y; }
+	{rank = same; P; }
+	{rank = same; A; }
+	{rank = same; D; }
+	{rank = same; N; }
+	{rank = same; E; }
+	{rank = same; T; }
+	{rank = same; G; }
+	{rank = same; X; }
+	{rank = same; I; }
+	{rank = same; J; }
+	{rank = same; L; }
+	{rank = same; S; }
+	{rank = same; V; }
+	{rank = same; Q; }
+	{rank = same; U; }
+	{rank = same; B; }
+	{rank = same; F; }
+	{rank = same; R; }
+
+
+	Ñ->C
+	C->O
+	O->Z
+	Z->M
+	M->H
+	H->Y
+	Y->P
+	P->A
+	A->D
+	D->N
+	N->E
+	E->T
+	T->G
+	G->X
+	X->I
+	I->J
+	J->L
+	L->S
+	S->V
+	V->Q
+	Q->U
+	U->B
+	B->F
+	F->R
+
+
+}

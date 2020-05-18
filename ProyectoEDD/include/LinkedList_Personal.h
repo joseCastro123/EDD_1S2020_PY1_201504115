@@ -10,9 +10,6 @@ using namespace std;
 class LinkedList_Personal
 {
     public:
-        Node_Score_Personal *header_score_p;
-        Node_Score_Personal *tail_scrore_p;
-
         //meths
         bool is_Empty_scp();
         void insert_Front(int);
@@ -27,6 +24,11 @@ class LinkedList_Personal
     protected:
 
     private:
+        Node_Score_Personal *header_score_p;
+        Node_Score_Personal *tail_scrore_p;
 };
 
 #endif // LINKEDLIST_PERSONAL_H
+
+
+

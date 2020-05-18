@@ -8,7 +8,7 @@ digraph R {
 	Diccionario [label="Diccionario\l"]
 
 
-{rank = same;  	hola; 	mundo; 	proyecto; 	Diccionario; }
+	{rank = same;  	hola; 	mundo; 	proyecto; 	Diccionario; }
 
 
 	hola->mundo[dir=both]

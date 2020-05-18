@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1586142130 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/main.cpp
+1588734589 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/main.cpp
 	<iostream>
 	<string>
 	"CirculadDoublyLinkedList.h"
@@ -9,9 +9,11 @@
 	"LinkedList_Personal.h"
 	"Sparse_Matrix.h"
 	"Read_File.h"
+	"Menu.h"
 	<iostream>
 	<fstream>
 	<jsoncpp/json/json.h>
+	<cstdlib>
 
 1586136746 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/CirculadDoublyLinkedList.h
 	"Node_CD.h"
@@ -27,32 +29,40 @@
 	<iostream>
 	<string>
 
-1586139623 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/CirculadDoublyLinkedList.cpp
+1586142925 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/CirculadDoublyLinkedList.cpp
 	"CirculadDoublyLinkedList.h"
 	"Node_CD.h"
 	<fstream>
 	<iostream>
 	<string>
 
-1584124410 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Token.cpp
+1586492047 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Token.cpp
 	"Node_Token.h"
 	<iostream>
 	<string>
 
-1584124409 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_Token.h
+1586492077 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_Token.h
 	<iostream>
 	<string>
 
-1584154293 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Cola.cpp
+1588974634 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Cola.cpp
 	"Cola.h"
 	"Node_Token.h"
 	<iostream>
+	<fstream>
 	<string>
+	<cstdlib>
+	<jsoncpp/json/json.h>
 
-1584131362 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Cola.h
+1586492126 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Cola.h
 	"Node_Token.h"
 	<iostream>
 	<string>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<jsoncpp/json/json.h>
+	<locale.h>
 
 1584155992 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Score_Personal.cpp
 	"Node_Score_Personal.h"
@@ -61,22 +71,23 @@
 
 1584155253 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_Score_Personal.h
 
-1584223081 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/LinkedList_Personal.cpp
+1588974484 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/LinkedList_Personal.cpp
 	"LinkedList_Personal.h"
 	<iostream>
 	<string>
 
-1584223105 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/LinkedList_Personal.h
+1588974484 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/LinkedList_Personal.h
 	"Node_Score_Personal.h"
 	<iostream>
 	<string>
 
-1586136653 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_ABB.cpp
+1589137318 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_ABB.cpp
 	"Node_ABB.h"
 	<iostream>
 	<string>
 
-1586135623 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_ABB.h
+1589138123 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_ABB.h
+	"LinkedList_Personal.h"
 	<iostream>
 	<string>
 
@@ -116,7 +127,7 @@
 	<string.h>
 	"Node_Sparse.h"
 
-1586131948 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Read_File.cpp
+1588822389 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Read_File.cpp
 	"Read_File.h"
 	<iostream>
 	<string>
@@ -126,20 +137,59 @@
 	"Sparse_Matrix.h"
 	"CirculadDoublyLinkedList.h"
 
-1586058097 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Read_File.h
+1586485852 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Read_File.h
 	<iostream>
 	<string>
 	"Sparse_Matrix.h"
 	"CirculadDoublyLinkedList.h"
 
-1586136673 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Arbol_Busqueda.cpp
+1589427775 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Arbol_Busqueda.cpp
 	"Arbol_Busqueda.h"
 	"Node_ABB.h"
+	"List_Tree.h"
+	<iostream>
+	<fstream>
+	<string>
+
+1589426012 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Arbol_Busqueda.h
+	"Node_ABB.h"
+	"List_Tree.h"
 	<iostream>
 	<string>
 
-1586136627 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Arbol_Busqueda.h
-	"Node_ABB.h"
+1588713703 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/List_Tree.cpp
+	"List_Tree.h"
 	<iostream>
 	<string>
+
+1588713671 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/List_Tree.h
+	"Node_Aux.h"
+	<iostream>
+	<string>
+
+1587871680 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Node_Aux.h
+	<iostream>
+	<string>
+
+1587871855 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Node_Aux.cpp
+	"Node_Aux.h"
+	<iostream>
+	<string>
+
+1589425259 source:/home/dark/CodeBlock/Proyecto/ProyectoEDD/src/Menu.cpp
+	"Menu.h"
+	"Read_File.h"
+	"Arbol_Busqueda.h"
+	<iostream>
+	<string>
+
+1588965606 /home/dark/CodeBlock/Proyecto/ProyectoEDD/include/Menu.h
+	"Read_File.h"
+	"CirculadDoublyLinkedList.h"
+	"Sparse_Matrix.h"
+	"Arbol_Busqueda.h"
+	"Cola.h"
+	<iostream>
+	<string>
+	<string.h>
 

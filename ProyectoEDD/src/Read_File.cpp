@@ -34,6 +34,7 @@ void Read_File::readFile(string path,CirculadDoublyLinkedList *circ_DL,Sparse_Ma
         //cout << "Y: " << obj["casillas"]["dobles"][i]["y"].asUInt()<<endl;
         cout << endl;
     }
+    cout<<"Datos cargado correctamente....\n";
 /*
     const Json::Value& triple = obj["casillas"]["triples"]; // array of characters
     for (int i = 0; i <triple.size(); i++){

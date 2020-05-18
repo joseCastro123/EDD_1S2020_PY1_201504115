@@ -1,0 +1,17 @@
+digraph Tree{
+	rankdir=TB
+	node [shape=record, fontname=Arial];
+
+
+	Belinda:<Belinda2>
+	Jose:<Jose0>->Belinda
+	Jose:<Jose2>->Roxana
+	Roxana:<Roxana2>
+
+
+	Belinda[label="<Belinda0>|<Belinda1>Belinda|<Belinda2>"]
+	Roxana[label="<Roxana0>|<Roxana1>Roxana|<Roxana2>"]
+	Jose[label="<Jose0>|<Jose1>Jose|<Jose2>"]
+
+
+}
